@@ -1,5 +1,7 @@
+@use "../mm-design-system/utils.functions" as *;
+
 $breakpoints: (
-   small: 30em,
-   medium: 45em,//50em,//45em,
-   large: 65em, 
+   small: torem(480),//30em,
+   medium: torem(750),//45em,//50em,//45em,
+   large: torem(1100) 
 )

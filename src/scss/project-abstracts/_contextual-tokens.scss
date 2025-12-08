@@ -10,8 +10,8 @@ $enable-media-query-dark-mode: false;//false= il n'y a pas de double modes à pr
 // COLORS =======================================
 $color-background-default: $color-neutral-100;
 $color-text-default: $color-neutral-500;
-$color-text-interactive-default: $color-primary-400;
-$color-text-interactive-hover: $color-accent-500;
+$color-text-interactive-default: $color-primary-300;
+$color-text-interactive-hover: $color-neutral-500;
 
 // RADIUS =======================================
 $border-radius-1: $size-1;
@@ -36,7 +36,7 @@ $box-shadow-5: 0px 6px 5px rgb(0, 0, 0, 0.04), 0px 22px 18px rgb(0, 0, 0, 0.06),
 
 // BODY =========================================
 $body-font-family: $font-family-base;
-$body-font-size: $font-size-400;
+$body-font-size: $font-size-500;
 $body-font-weight: $font-weight-regular;
 $body-line-height: 1.5;
 $body-text-color: $color-text-default;
@@ -47,42 +47,55 @@ $link-color: $color-text-interactive-default;
 $link-color-hover: $color-text-interactive-hover;
 $link-decoration-default: none;
 $link-decoration-hover: none;
-$link-font-weight: $font-weight-regular;
+$link-font-weight: $font-weight-regular; 
 
 // TITLES =======================================
 $title-font-family: $font-family-accent;
 $title-color-default: $color-neutral-500;
-$title-font-weight: $font-weight-semi-bold;
+$title-font-weight: $font-weight-bold;
 $title-letter-spacing: $letter-spacing-wide;
 $title-line-height: 1.1;
 $title-text-transform: none;
 
 $title-1-font-size: $font-size-800;
 $title-1-color: $title-color-default;
-$title-2-font-size: $font-size-700;
+$title-1-font-weight: $font-weight-semi-bold;
+$title-2-font-size: $font-size-400;
 $title-2-color: $title-color-default;
 $title-3-font-size: $font-size-600;
 $title-3-color: $title-color-default;
 
-//  LAYOUT ======================================
-$flow-space: 2rem;
-$grid-gap: $size-6;
-$flex-group-gap: $size-4;
-$hero-padding-block: clamp(15rem, 22dvh, torem(320));
-$section-padding-block: clamp(1.7rem, 8dvh, torem(60));// responsive height
 
-$page-max-width: torem(1280);
-$container-min-margin-inline: $size-4;
+
+// ===============================
+//  LAYOUT AND LARGE CONTAINERS   
+// ===============================
+
+// FLEX & GRID ---------------
+$flow-space: 2rem;
+$grid-gap: $size-7;
+$flex-group-gap: $size-3;
+$auto-grid-min: min(300px, 100%);
+
+// PAGE ---------------
+$page-max-width: torem(1100);
+
+// HERO ---------------
+$hero-padding-block: $size-7 ;//clamp(15rem, 22dvh, torem(320));
+
+// SECTION ---------------
+$section-padding-block: $size-13;//clamp(1.7rem, 8dvh, torem(60));// responsive height
+
+// CONTAINER ---------------
+$container-min-margin-inline: $size-7;
 $container-max-width-narrow: torem(570);/* optional */ //35.6rem
 $container-max-width-default: torem(1024);/* required*/ //64rem 
 $container-max-width-wide: torem(1200);/* optional */ //75rem 
 
-$auto-grid-min: min(250px, 100%);
-
-// HEADERS ======================================
+// HEADERS --------------- 
 $site-header-background-color: $color-neutral-100;
 $site-header-color: $color-neutral-500;
-$site-header-padding: $size-8 0;
+$site-header-padding: $size-7 0;
 $site-header-margin: 0;
 
 $site-header-justify-small-screens: center;
@@ -90,7 +103,7 @@ $site-header-justify-large-screens: space-between;
 $site-header-media-query-large-screen-breakpoint: "medium";
 $site-header-align: center;
 
-// FOOTER =======================================
+// FOOTER ---------------
 $site-footer-background-color: $color-neutral-100;
 $site-footer-padding: $size-8 0;
 $site-footer-text-color: $color-primary-100;
@@ -99,7 +112,13 @@ $site-footer-link-color: $color-primary-500;
 $site-footer-link-color-hover: $color-accent-400;
 $site-footer-link-text-decoration: none;
 
-// Navigation ===================================
+
+
+// ===============================
+// COMPONENTS 
+// ===============================
+
+// Navigation --------------- 
 $navigation-color: $site-header-color;
 $navigation-color-hover: $color-primary-300;
 $navigation-font-size: $font-size-400;
@@ -109,7 +128,7 @@ $navigation-font-family: $body-font-family;
 $navigation-font-weight: $body-font-weight;
 $navigation-letter-spacing: $letter-spacing-wide;
 
-// skip navigation
+// skip navigation ---------------
 $skip-nav-color: $color-neutral-100;
 $skip-nav-background-color: $color-primary-500;
 $skip-nav-padding: $size-3 $size-6;
@@ -123,11 +142,7 @@ $fine-print-color: $color-neutral-500;
 $fine-print-link-font-size: $fine-print-font-size;
 $fine-print-link-font-color: $fine-print-color;
 
-// HERO =========================================
-$hero-padding-block: clamp(15rem, 15vh, 20rem);
-
-
-// LOGO =========================================
+// LOGO ---------------
 
 $logo-fill-default: $color-primary-400;
 $logo-fill-header: $color-primary-200;
@@ -136,7 +151,7 @@ $logo-size-default: 14rem;
 $logo-size-header: $logo-size-default;
 $logo-size-footer : $logo-size-default;
 
-// BUTTON =======================================
+// BUTTON ---------------
 $button-font-family: $body-font-family;
 $button-font-size: $font-size-400;
 $button-font-weight: $body-font-weight;
@@ -146,7 +161,6 @@ $button-wide-padding: .86em 1.2em;
 $button-border: 0;
 $button-border-radius: $border-radius-1;
 $button-animation: 180ms ease-out;
-
 
 $button-default-color: $link-color;
 $button-default-background: transparent;
@@ -168,7 +182,7 @@ $button-accent-background: $color-accent-400;
 $button-accent-color-hover: $color-neutral-100;
 $button-accent-background-hover: $color-accent-500;
 
-// CARD ========================================= 
+// CARD  --------------- 
 // for gap > $grid-gap
 $card-flow-spacing: $size-2;
 $card-padding: $size-8;
@@ -183,7 +197,7 @@ $card-title-font-size: $font-size-600;
 $card-body-padding: $size-4;
 
 
-// FORM =========================================
+// FORM  ---------------
 $form-label-color: $body-text-color;
 $form-label-font-family: $body-font-family;
 $form-label-font-weight: $font-weight-bold;
