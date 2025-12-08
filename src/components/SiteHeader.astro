@@ -1,0 +1,33 @@
+---
+
+// import navigationData from "../content/primary-navigation.json";
+// import LogoLink from "./navigation/LogoLink.astro";
+// import SocialLinks from "./navigation/SocialLinks.astro";
+// import PrimaryNavigation from "./navigation/PrimaryNavigation.astro";
+// import Button from "./Button.astro";
+// import BurgerButton from "./navigation/BurgerButton.astro";
+const { skipTo = "#main" } = Astro.props;
+
+//const primaryNavigationID = "header-primary-navigation";
+---
+
+<header class="site-header" >
+  <a href={skipTo} class="skip-nav-link">Skip to content</a>
+  <div class="container">
+    <div class="site-header--inner">
+      <!-- <LogoLink />
+      <BurgerButton relatedNavigationID={primaryNavigationID} /> -->
+      <!-- <div class="flex-group -vcenter" style="--flex-column-gap: 2rem"> -->
+       <!-- 
+      si on utilise le burger-button, on ne peut avoir flex-group constament appliqué, 
+      cela va dépendre de l'état du burger-button.
+      les styles sont placé dans toggle-menu
+       -->
+      <!-- <div class="toggle-menu">
+        <PrimaryNavigation id={primaryNavigationID} aria="primary navigation" {navigationData} />
+        <SocialLinks elements="Instagram, X, Facebook"/>
+        <Button class="subscribe | -primary">Subscribe to Newsletter</Button>
+      </div> -->   
+    </div>
+  </div>
+</header>

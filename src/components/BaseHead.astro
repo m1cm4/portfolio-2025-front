@@ -1,0 +1,31 @@
+---
+
+import "../scss/main.scss";
+// import {SEOMetadata} from "astro-seo-metadata";
+import { ClientRouter } from "astro:transitions";
+const { 
+  title = "Portfolio | Michel MAES",
+} = Astro.props;
+
+
+---
+
+<head>
+  <meta charset="UTF-8" />
+  	<!-- <SEOMetadata
+		siteName={"food fun travel"}
+		title={title}
+		description={description}
+		image=`${ogimage}`
+		author={author}
+		astroSitemap={true}
+		canonicalUrl={Astro.url.toString()}
+		type={'website'}
+		astroGenerator={true}
+	/> -->
+	
+	<title>{title}</title>
+  <meta name="viewport" content="width=device-width" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <ClientRouter />
+</head>
