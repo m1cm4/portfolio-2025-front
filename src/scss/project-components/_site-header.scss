@@ -1,5 +1,32 @@
 
 .site-header{
-   background: transparent;
-  transform: translateY(-4rem)
+
+  transform: translateY(-6rem);
+  background: linear-gradient(135deg, #F0FAEE 60%, transparent);
+  padding-block: 20px;
+//   border: 1px solid red;
+  position: sticky;
+   z-index: 1000;
+   top: 0;
+  
+  @supports (animation-timeline: view()){
+   position: sticky;
+   z-index: 1000;
+   top: 0rem;
+   animation: stickyn forwards;
+   animation-timeline: view();
+   animation-range-start: 98vh;
+   animation-range-end: 110vh;
+  }
+  @keyframes stickyn{
+   from{
+      transform: translateY(-6rem);
+   }
+   to{
+      top: 0rem;
+      background: rgba(219, 238, 217, 0.784);
+      transform: translateY(0);
+   }
+  }
+
 }

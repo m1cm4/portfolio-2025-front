@@ -1,0 +1,19 @@
+
+// donné à body
+// pour replacer le menu comme secon élément
+.global-grid-layout{
+   display:grid;
+   border: 1 px solid green;
+   grid-template-areas: 
+   "first"
+   "second"
+   ".";
+
+   .site-header{
+      grid-area: second;
+   }
+
+   .hero{
+      grid-area:first;
+   }
+}

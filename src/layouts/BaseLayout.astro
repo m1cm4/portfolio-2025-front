@@ -1,17 +1,17 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
+import Hero from "../components/Hero.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import SiteHeader from "../components/SiteHeader.astro";
-const { title = ""} = Astro.props;
+const { title = "Portfolio | Michel MAES"} = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" >
+<html lang="en" {title}>
   <BaseHead />
-  <body class={""}>
-    <main id="main">
+  <body class="global-grid-layout">
+    <SiteHeader />
       <slot />
-    </main>
     <SiteFooter />
   </body>
 </html>
