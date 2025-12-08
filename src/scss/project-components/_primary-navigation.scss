@@ -1,0 +1,32 @@
+@use "../mm-design-system/abstracts/" as *;
+
+
+.primary-nav{
+
+   display: flex;
+   gap: $navigation-gap;
+   align-self: center;
+   padding-block: 0px;
+   // position:relative;
+   // top: -3.2rem;
+   // height:0;
+
+
+
+   
+   a{
+      display: inline-block;
+      color: $color-neutral-100;
+      font-family: $font-family-accent;
+      font-weight: $font-weight-extra-bold;
+      letter-spacing: .05em;
+      background: $color-neutral-500;
+      padding: .26em .8em;
+      border-radius: 100vw;
+      &:hover, &:focus-visible{
+         color: $color-neutral-100;
+         background-color: $color-primary-200;
+      }
+   }
+
+}

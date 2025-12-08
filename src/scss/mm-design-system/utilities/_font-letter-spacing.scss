@@ -1,0 +1,14 @@
+@use "../abstracts" as *;
+
+.letter-spacing-narrow{
+   letter-spacing: $letter-spacing-narrow;
+}
+.letter-spacing-regular{
+   letter-spacing: $letter-spacing-regular;
+}
+.letter-spacing-large{
+   letter-spacing: $letter-spacing-large;
+}
+.letter-spacing-wide{
+   letter-spacing: $letter-spacing-wide;
+}
