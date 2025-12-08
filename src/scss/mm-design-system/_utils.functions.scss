@@ -1,0 +1,51 @@
+@use 'sass:meta';
+@use 'sass:map';
+@use 'sass:list';
+@use 'sass:math';
+
+// ========================
+// Unit Functions
+//  ========================
+/**
+* $val: value in px, rem ou without unit
+* @return : number in rem
+* 
+**/
+
+@function torem($val){
+   @if math.unit($val) == "" {
+      @return  math.div($val,16) * 1rem;
+   }
+   @if math.unit($val) == "px" {
+      @return  math.div($val,16px) * 1rem;
+   }
+   @if math.unit($val) == "rem"{
+      @return  val;
+   }
+   @error "error when convert the value '#{$val}' in rem"  
+}
+
+@function stripUnit($number) {
+   @if meta.type-of($number) == "number" and not math.is-unitless($number) {
+     @return math.div($number, $number * 0 + 1);
+   }
+   @return $number;
+}
+
+
+// ========================
+// MAP object manipulation
+//  ========================
+@function getElementByIndex($mapObject, $index){
+   $keyList : map.keys($mapObject);
+   $key : list.nth( $keyList, $index);
+   @return map.get($mapObject, $key);
+}
+
+@function isMap($object){
+   @return meta.type-of( $object ) == map;
+}
+
+@function isTwoDimensionalMap($object){
+   @return isMap( getElementByIndex($object, 1) );
+}

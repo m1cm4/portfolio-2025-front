@@ -1,0 +1,74 @@
+@use "sass:meta";
+@use "../abstracts" as *;
+@use "../utils.functions" as *;
+
+:root{
+   
+   // COLORS PROPERTIES ============================================
+   @each $color, $shade-map in $active-theme {
+      @each $shade, $value in $shade-map {
+         --#{$color}-#{$shade}: #{$value};
+      }
+   }
+   @if $enable-media-query-dark-mode {      
+      @media (prefers-color-scheme: dark) {
+         @each $color, $shade-map in $dark-colors-palette {
+            @each $shade, $value in $shade-map {
+               --#{$color}-#{$shade}: #{$value};
+            }
+         }
+      }
+   }
+   
+   // theme selelected manually by the visitor
+   // 'data-theme' assigned via js
+   @if meta.global-variable-exists("light-colors-palette"){
+      body[data-theme="light"] {
+         @each $color, $shade-map in $light-colors-palette {
+            @each $shade, $value in $shade-map {
+               --#{$color}-#{$shade}: #{$value};
+            }
+         }
+      }
+   }
+   
+   @if meta.global-variable-exists("dark-colors-palette"){
+      body[data-theme="dark"] {
+         @each $color, $shade-map in $dark-colors-palette {
+            @each $shade, $value in $shade-map {
+               --#{$color}-#{$shade}: #{$value};
+            }
+         }
+      }
+   }
+   
+   // FONT SIZE PROPERTIES ============================================
+   /**
+   Check first if font-sizes is two dimensional map.
+   Then generate css properties from the unique map or the "small screensize" map outside media query rule
+   Finally, generate the other maps if any inside media query
+   */
+   @if isTwoDimensionalMap($font-sizes) {
+      @each $screen-size, $size-map in $font-sizes{
+      // for the small-breakpoint font sizes, don't declare css props. inside media query
+         @if $screen-size == small{ 
+            @each $size-name,$size-value in $size-map{
+               --fs-#{$size-name}:#{$size-value};
+            }
+            $first: false;  
+         }
+         @else{
+            @include mq($screen-size) {
+               @each $size-name,$size-value in $size-map{
+                  --fs-#{$size-name}:#{$size-value};
+               }
+            }
+         }
+      }
+   }
+   @else {
+      @each $size-name,$size-value in $font-sizes{
+         --fs-#{$size-name}:#{$size-value};
+      }
+   } 
+}

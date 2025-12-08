@@ -1,0 +1,16 @@
+@use "../abstracts" as *;
+/*
+define space between elements in a flow,
+for its specificity, prefer "*:where(:not(:first-child))" over "* + * " 
+*/ 
+
+.flow > *:where(:not(:first-child)){
+   margin-top: var(--flow-space, $flow-space);
+}
+
+// loop generating classes related to each size
+@each $size-px,$size-value  in $sizes{
+  .flow#{$size-px} > *:where(:not(:first-child)){
+              margin-top: $size-value;
+         }
+  }

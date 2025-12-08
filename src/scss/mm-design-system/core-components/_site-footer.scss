@@ -1,0 +1,29 @@
+@use "../abstracts/" as *;
+
+
+.site-footer{
+   background-color: $site-footer-background-color;
+   color: $site-footer-text-color;
+   padding:$site-footer-padding;
+
+    a {
+    color: $site-footer-link-color;
+    text-decoration: $site-footer-link-text-decoration;
+    font-family: $site-footer-link-font-family;
+    letter-spacing: $letter-spacing-wide;
+    
+    &:is(:hover, :focus-visible) {
+      color: $site-footer-link-color-hover;
+    }
+  }
+}
+
+.fine-print{
+   font-size: $fine-print-font-size;
+   color: $fine-print-color;
+   a{
+      color: $fine-print-link-font-color;
+      font-size: $fine-print-link-font-size;
+      text-decoration: none;
+   }
+}
