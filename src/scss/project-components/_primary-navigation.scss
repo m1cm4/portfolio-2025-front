@@ -28,5 +28,14 @@
          background-color: $color-primary-200;
       }
    }
+   
+   font-size: .82rem;
+   @include mq(small){
+      font-size: $font-size-300;
+   }
+
+   @include mq(medium){
+      font-size: $font-size-400;
+   }
 
 }
