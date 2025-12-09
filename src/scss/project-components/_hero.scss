@@ -2,6 +2,7 @@
 
 .hero{
    background: linear-gradient(135deg, #F0FAEE 60%, transparent);
+   padding-block-end: $size-7;
 
    h1{
       text-align: center;
@@ -17,7 +18,8 @@
       text-align: center;
    }
    &--description p{
-      max-width: 40ch;
+      line-height: 1.8rem;
+      max-width: 44ch;
       margin-inline: auto;
    }
 }
