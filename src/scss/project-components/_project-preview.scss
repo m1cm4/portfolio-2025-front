@@ -1,11 +1,20 @@
 @use "../mm-design-system/abstracts/" as *;
 
 .project-preview{
+   --flow-space: 1.5rem;
    display: grid;
    grid-template-rows: auto auto auto 1fr auto;
-    align-content: stretch;
+   align-content: stretch;
+
+   &.featured{
+      grid-column: span 2;
+   }
 
    .image-container{
+          border: 1px solid #e5e5e5;
+    box-shadow: 0px 8px 10px 2px #cccccc17;
+    border-radius: 3px;
+    overflow: hidden;
       img{
          display: block;
          aspect-ratio: 2 / 1.3;
@@ -13,7 +22,18 @@
       }
    }
    .project-body{
+      --flow-space: 1rem;
       margin-top: 10px;
+      font-weight: $font-weight-light;
+      ul{
+         margin-top: 0;
+         list-style-type: circle;
+         margin-left: 1em;
+      }
+      em{
+         font-style: italic;
+         color: $color-neutral-400;
+      }
    }
 
    .tag-list{
@@ -21,6 +41,7 @@
       display: flex;
       width: 100%;
       gap: $size-3;
+      flex-wrap: wrap;
 
    
    }
@@ -33,7 +54,7 @@
       font-family: $font-family-accent;
       font-size: 13px; 
       text-transform: uppercase;
-      font-weight: $font-weight-extra-bold;
+      font-weight: $font-weight-bold;
       letter-spacing: .04em;
       
    }
@@ -59,17 +80,34 @@
 
    }
 
+   .webdesign{
+       color: $color-neutral-100;
+      background: #82573e;
+   }
+
    .nodejs{
       color: $color-neutral-500;
       background: #BEF6AE;
    }
+   .jquery{
+      color: $color-neutral-500;
+      background: #fdaf61;
+   }
    .css, .sass{
       color: $color-neutral-500;
-      background: #FFC6C6;
+      background: #f7d71d;
    } 
-    .php, .drupal, .wordpress{
+   .php{
+       color: $color-neutral-500;
+      background: #9a8fed;
+   }
+    .drupal, .wordpress, .yii{
       color: $color-neutral-500;
       background: #cce9f1;
    }  
+   .mysql{
+      color: $color-neutral-500;
+      background: #e0ea85;
+   }
 
 }
