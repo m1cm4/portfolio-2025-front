@@ -1,6 +1,55 @@
 ---
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import ProjectPreview from "./ProjectPreview.astro";
 
+// Définition de l'interface pour le groupe de catégories
+interface CategoryGroup {
+  category: string;
+  projects: CollectionEntry<"projects">[];
+}
+
+const projects = await getCollection("projects");
+
+projects.sort((a, b) => {
+   // Ajout d'une valeur par défaut (0) pour éviter les erreurs si 'order' est manquant
+   return (b.data.order || 0) - (a.data.order || 0);
+});
+
+// Typage explicite de Map
+const projectsByCategoryMap = projects.reduce((acc, project) => {
+   // Cast en string ou valeur par défaut si nécessaire
+   const categoryKey = (project.data.category as string) || "Autres";
+   
+   if(!acc.has(categoryKey)){
+      acc.set(categoryKey, {category: categoryKey, projects: []})
+   }
+   // L'opérateur '!' assure à TS que la valeur existe (car on vient de la créer si absente)
+   acc.get(categoryKey)!.projects.push(project);
+   return acc;
+}, new Map<string, CategoryGroup>());
+
+const projectByCategory = Array.from(projectsByCategoryMap.values());
 ---
+<div>{
+   projectByCategory.map( group => 
+      <section class="section">
+         <div class="container">
+            {/* Correction : Ajout des accolades pour l'interpolation de la variable */}
+            <h2>{group.category}</h2>
+            <div class="grid-auto-fit mbs-14">
+               {/* 'p' est maintenant correctement typé grâce à l'interface CategoryGroup */}
+               { group.projects.map( p  =>  <ProjectPreview project={p} />)}
+            </div>
+         </div>
+      </section>
+   )
+}
+</div>
+
+{/* ... Reste du code HTML statique ... */}
+
+
 
 <section class="section">
    <div class="container">

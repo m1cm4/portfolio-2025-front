@@ -3,13 +3,12 @@ import BaseHead from "../components/BaseHead.astro";
 import Hero from "../components/Hero.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import SiteHeader from "../components/SiteHeader.astro";
-const { title = "Portfolio | Michel MAES"} = Astro.props;
+const { class:classlist =  "", title = "Portfolio | Michel MAES"} = Astro.props;
 ---
 
-<!doctype html>
-<html lang="en" {title}>
-  <BaseHead />
-  <body class="global-grid-layout">
+<html lang="en" >
+  <BaseHead {title}/>
+  <body class:list={classlist}>
     <SiteHeader />
       <slot />
     <SiteFooter />

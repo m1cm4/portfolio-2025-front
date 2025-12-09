@@ -1,0 +1,53 @@
+---
+import Tag from './Tag.astro';
+import type { CollectionEntry } from 'astro:content';
+// import FormattedDate from './FormattedDate.astro';
+//import { trimText, urlFriendly } from '../js/text.utils';
+
+interface Props {
+   project: CollectionEntry<'projects'>;
+}
+interface Link {
+   href : string;
+   label : string;
+}
+
+const { project } = Astro.props;
+//const trimedContent = trimText(article.body, excerptLetter);
+const tags: string[] = project.data.tags; 
+
+//recuperer les liens
+// separation des valeurs "[valeur1](valeur2)"
+const regex = /\[(.*?)\]\((.*?)\)/;
+const links: Link[] = project.data.linklist.map( (l : string) : Link | null => {
+   const result = l.match(regex);
+   if (!result) return { label: l, href: ""};
+   return { label: result[1], href: result[2]};
+});
+
+
+---
+
+<article class="project-preview | flow">
+   <div class="image-container">
+      <img src={project.data.imageSrc} alt={project.data.imageAlt} >
+      <div class="tagList">
+         {
+            tags.map( tag => <Tag text={tag}/>)
+         }
+
+      </div>
+      
+   </div>
+
+   <h2 class="title-3 project-title">{project.data.title}</h2>
+   <div class="project-body">{project.body}</div>
+   <p class="link-list">{
+      links.map((l:Link) =>
+         (l.href) ? 
+            <span><a href={l.href}>{l.label}</a></span>
+            :
+            <span>{l.label}</span>
+   )}
+   </p>
+</article>
