@@ -17,7 +17,7 @@ linklist:
   - "[website](http://albinocipriani.com/)"
 
 ---
-Site vitrine pour Albino Cipriani - Architecture (Paris) 
+Site vitrine pour Albino Cipriani - Architecture [Paris] 
   - maquettes 'responsive'
   - Intégration HTML 5
   - Interactivité : galeries photos en Jquery
