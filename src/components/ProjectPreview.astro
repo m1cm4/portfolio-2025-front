@@ -28,19 +28,16 @@ const links: Link[] = project.data.linklist.map( (l : string) : Link | null => {
 
 ---
 
-<article class="project-preview | flow">
+<article class="project-preview flow">
    <div class="image-container">
-      <img src={project.data.imageSrc} alt={project.data.imageAlt} >
-      <div class="tagList">
-         {
-            tags.map( tag => <Tag text={tag}/>)
-         }
-
-      </div>
-      
+      <img src={project.data.imageSrc} alt={project.data.imageAlt} />
    </div>
 
-   <h2 class="title-3 project-title">{project.data.title}</h2>
+   <h2 class="title-3">{project.data.title}</h2>
+      <div class="tag-list">{
+            tags.map( tag => <Tag text={tag}/>)
+   }
+   </div>
    <div class="project-body">{project.body}</div>
    <p class="link-list">{
       links.map((l:Link) =>

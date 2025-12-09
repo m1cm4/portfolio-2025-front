@@ -38,7 +38,7 @@ $box-shadow-5: 0px 6px 5px rgb(0, 0, 0, 0.04), 0px 22px 18px rgb(0, 0, 0, 0.06),
 $body-font-family: $font-family-base;
 $body-font-size: $font-size-500;
 $body-font-weight: $font-weight-regular;
-$body-line-height: 1.5;
+$body-line-height: 1.4;
 $body-text-color: $color-text-default;
 $body-background-color: $color-background-default;
 
@@ -75,7 +75,7 @@ $title-3-color: $title-color-default;
 $flow-space: 2rem;
 $grid-gap: $size-7;
 $flex-group-gap: $size-3;
-$auto-grid-min: min(300px, 100%);
+$auto-grid-min: min(100px, 100%);
 
 // PAGE ---------------
 $page-max-width: torem(1100);

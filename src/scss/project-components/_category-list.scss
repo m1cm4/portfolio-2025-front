@@ -1,0 +1,33 @@
+@use "../mm-design-system/abstracts/" as *;
+
+.category-list{
+   
+   .container{
+      display: grid;
+      
+      gap: $size-11;
+      grid-template-columns: 1fr;
+      @include mq(medium){
+         grid-template-columns: 13rem 1fr;
+      }
+
+
+
+      > h2{
+         position: sticky;
+         top: 4.5rem;
+         background: $color-neutral-100;
+         max-height: 8rem;
+
+         padding-block-start: $size-1;
+         padding-block-end: .8rem;
+         border-top: 4px solid $color-neutral-500;
+         text-align: right;
+         font-size: $font-size-400;
+         font-family: $font-family-accent;
+         font-weight: $font-weight-extra-bold;
+
+      }
+   }
+
+}

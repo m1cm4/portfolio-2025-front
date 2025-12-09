@@ -7,27 +7,27 @@
    z-index: 1000;
    top: 0;
   
-//   @supports (animation-timeline: view()){
-//    animation: stickyn forwards;
-//    animation-timeline: view();
-//    animation-range-start: 98vh;
-//    animation-range-end: 110vh;
-//   }
-//   @keyframes stickyn{
-//    from{
-//       transform: translateY(-6rem);
-//    }
-//    to{
-//       top: 0rem;
-//       background: rgba(219, 238, 217, 0.784);
-//       transform: translateY(0);
-//    }
-//   }
+  @supports (animation-timeline: view()){
+   animation: stickyn forwards;
+   animation-timeline: view();
+   animation-range-start: 98vh;
+   animation-range-end: 110vh;
+  }
+  @keyframes stickyn{
+   from{
+      transform: translateY(-6rem);
+   }
+   to{
+      top: 0rem;
+      background: rgba(233, 248, 231, 0.959);
+      transform: translateY(0);
+   }
+  }
 
 }
 
 .global-gridl-layout{
    .site-header{
-  transform: translateY(-6rem)
+  transform: translateY(-6rem);
    }
 }

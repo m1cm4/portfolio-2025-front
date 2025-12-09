@@ -1,21 +1,9 @@
 ---
-const map = new Map()
-map.set("php", "purple");
-map.set("css", "yellow");
-map.set("js", "yellow");
-map.set("html", "cyan");
-map.set("nodejs", "green");
-map.set("print", "gray");
-map.set("logo", "gray");
-map.set("logotype", "gray");
-map.set("drupal", "blue");
-map.set("laravel", "green");
-map.set("default", "lightgray")
 
 
 const { text = "default"} = Astro.props;
-const index = String(text).toLowerCase();
-const colorClass= map.get(index) ;
+const textClass = String(text).trim().toLowerCase();
+
 ---
 
-<span class=`tag ${colorClass}`>{text}</span>
+<span class=`tag ${textClass}`>{text}</span>

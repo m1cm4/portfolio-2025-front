@@ -12,6 +12,7 @@
       color: $navigation-color;
       letter-spacing:$navigation-letter-spacing;
       text-decoration: $navigation-link-text-decoration;
+      white-space: nowrap;
 
       &:is(:hover, :focus-visible){
          color: $navigation-color-hover;
