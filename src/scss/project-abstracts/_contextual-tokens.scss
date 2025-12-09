@@ -89,7 +89,7 @@ $section-padding-block: $size-13;//clamp(1.7rem, 8dvh, torem(60));// responsive 
 // CONTAINER ---------------
 $container-min-margin-inline: $size-7;
 $container-max-width-narrow: torem(570);/* optional */ //35.6rem
-$container-max-width-default: torem(1024);/* required*/ //64rem 
+$container-max-width-default: torem(1200);/* required*/ //64rem 
 $container-max-width-wide: torem(1200);/* optional */ //75rem 
 
 // HEADERS --------------- 
