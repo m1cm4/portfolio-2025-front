@@ -2,9 +2,9 @@
 featured: true
 order: 3000
 category: "Web"
-title: albinocipriani.com
+title: Albino Cipriani - Architecture
 imageSrc: /images/project/albinocipriani_ratio.webp
-imageAlt: Screenshot d'une page intérieur du site web albinocipriani.com affichant une gallerie photo d'un de ses projets d'architecure
+imageAlt: Interface du site web albinocipriani.com présentant une galerie de projet
 date: 2014-12-01
 tags:
   - Webdesign
@@ -17,10 +17,8 @@ linklist:
   - "[website](http://albinocipriani.com/)"
 
 ---
-Site vitrine pour Albino Cipriani - Architecture [Paris] 
-  - maquettes 'responsive'
-  - Intégration HTML 5
-  - Interactivité : galeries photos en Jquery
-  - backend Yii Framework
-
-
+Site vitrine responsive pour le cabinet d'architecture Albino Cipriani (Paris).
+  - Conception graphique et maquettage responsive
+  - Intégration HTML5 / CSS sur mesure
+  - Développement de galeries photos interactives (jQuery)
+  - Back-office personnalisé sous Yii Framework (PHP)

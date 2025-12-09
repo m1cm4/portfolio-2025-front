@@ -4,7 +4,7 @@ order: 2500
 category: "Web"
 title: III.com, graphic studio
 imageSrc: /images/project/troisbarres_ratio.webp
-imageAlt: Screenshot de la page d'accueil du site web de troisbarres.com
+imageAlt: Page d'accueil du site web troisbarres.com
 date: 2014-12-01
 tags:
   - CSS
@@ -15,9 +15,9 @@ linklist:
   - "[website](http://www.troisbarres.com)"
 
 ---
-Intégration, développement backend et déployement du site web de Troisbarrespoint.   
-  - Layout grille (avant `display:grid` 🙂)
-  - Jquery slideshows, 
-
-*graphisme: Isabelle Debry, Troisbarrespoint*
-
+Développement complet (Frontend & Backend) pour le studio graphique Troisbarrespoint.
+  - Intégration d'un layout complexe en grille (pré-CSS Grid)
+  - Développement de slideshows interactifs en jQuery
+  - Backend sous Drupal pour une gestion autonome du contenu
+  
+*Design graphique : Isabelle Debry, Troisbarrespoint*

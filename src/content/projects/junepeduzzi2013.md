@@ -4,20 +4,19 @@ order: 1000
 category: "Web"
 title: junepeduzzi.com
 imageSrc: /images/project/junepeduzzi2013_ratio.webp
-imageAlt: Screenshot d'une page intérieur du site web albinocipriani.com affichant une gallerie photo d'un de ses projets d'architecure
+imageAlt: Interface du site web junepeduzzi.com
 date: 2015-05-01
 tags:
   - Webdesign
   - CSS
-  - flash
+  - Flash
   - Drupal
   - MySQL
 linklist:
   - "site offline"
 
 ---
-Site porfolio pour June Peduzzi, videaste [Bruxelles,2015]
-  - Galeries images et videos interactives en Flash
-  - Drupal & Mysql
-
-
+Portfolio vidéo pour June Peduzzi, vidéaste (Bruxelles).
+  - Développement d'un lecteur vidéo interactif et de galeries en Flash
+  - Gestion de contenu dynamique via Drupal & MySQL
+  - Intégration CSS personnalisée
