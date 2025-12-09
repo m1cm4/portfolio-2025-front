@@ -1,6 +1,7 @@
 ---
 import Tag from './Tag.astro';
 import type { CollectionEntry } from 'astro:content';
+import { render } from "astro:content";
 // import FormattedDate from './FormattedDate.astro';
 //import { trimText, urlFriendly } from '../js/text.utils';
 
@@ -25,10 +26,10 @@ const links: Link[] = project.data.linklist.map( (l : string) : Link | null => {
    return { label: result[1], href: result[2]};
 });
 
-
+const { Content } = await render(project);
 ---
 
-<article class="project-preview flow">
+<article class=`project-preview flow ${project.data.featured ? "featured" : ""}`>
    <div class="image-container">
       <img src={project.data.imageSrc} alt={project.data.imageAlt} />
    </div>
@@ -38,11 +39,13 @@ const links: Link[] = project.data.linklist.map( (l : string) : Link | null => {
             tags.map( tag => <Tag text={tag}/>)
    }
    </div>
-   <div class="project-body">{project.body}</div>
+   <div class="project-body flow">
+      <Content />
+   </div>
    <p class="link-list">{
       links.map((l:Link) =>
          (l.href) ? 
-            <span><a href={l.href}>{l.label}</a></span>
+            <span><a href={l.href} target="_blank">{l.label}</a></span>
             :
             <span>{l.label}</span>
    )}

@@ -33,11 +33,11 @@ const projectByCategory = Array.from(projectsByCategoryMap.values());
 ---
 <div>{
    projectByCategory.map( group => 
-      <section class="section category-list">
+      <section class="section category-section">
          <div class="container">
             {/* Correction : Ajout des accolades pour l'interpolation de la variable */}
             <h2>{group.category}</h2>
-            <div class="grid-auto-fit">
+            <div class="grid-auto-fill project-list">
                {/* 'p' est maintenant correctement typé grâce à l'interface CategoryGroup */}
                { group.projects.map( p  =>  <ProjectPreview project={p} />)}
             </div>
