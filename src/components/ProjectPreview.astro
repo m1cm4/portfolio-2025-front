@@ -20,7 +20,7 @@ const tags: string[] = project.data.tags;
 //recuperer les liens
 // separation des valeurs "[valeur1](valeur2)"
 const regex = /\[(.*?)\]\((.*?)\)/;
-const links: Link[] = project.data.linklist.map( (l : string) : Link | null => {
+const links: Link[] = !project.data.linklist ? [] : project.data.linklist.map( (l : string) : Link | null => {
    const result = l.match(regex);
    if (!result) return { label: l, href: ""};
    return { label: result[1], href: result[2]};

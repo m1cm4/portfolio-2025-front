@@ -6,9 +6,11 @@
    grid-template-rows: auto auto auto 1fr auto;
    align-content: stretch;
 
-   &.featured{
-      grid-column: span 2;
-   }
+   //systeme featured n'est pas pris en compte pour le moment
+   // grit-auto-fil est désactivé > 1 seule colonne (voir projecct-base/grid-auto.scss
+   // &.featured{
+   //    grid-column: span 2;
+   // }
 
    .image-container{
           border: 1px solid #e5e5e5;
@@ -89,6 +91,10 @@
       color: $color-neutral-500;
       background: #BEF6AE;
    }
+   .flash{
+          color: $color-neutral-500;
+      background: #feacac; 
+   }
    .jquery{
       color: $color-neutral-500;
       background: #fdaf61;
@@ -99,7 +105,7 @@
    } 
    .php{
        color: $color-neutral-500;
-      background: #9a8fed;
+      background: #aeb4f6;
    }
     .drupal, .wordpress, .yii{
       color: $color-neutral-500;
