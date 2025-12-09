@@ -30,7 +30,9 @@
    }
    
    font-size: .82rem;
+   gap: .7rem;
    @include mq(small){
+      gap: $navigation-gap;
       font-size: $font-size-300;
    }
 
