@@ -32,7 +32,8 @@ const { Content } = await render(project);
 <article class=`project-preview flow ${project.data.featured ? "featured" : ""}`>
    <div class="image-container">
       <picture>
-         <img src=`${project.data.imageSrc}` alt={project.data.imageAlt} />
+         <img src=`${project.data.imageSrc}` alt={project.data.imageAlt}
+            loading="lazy" />
       </picture>
    </div>
 
