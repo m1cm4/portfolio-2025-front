@@ -13,7 +13,6 @@ $fontSizeMap : $font-sizes;
 @if isTwoDimensionalMap($font-sizes){
    $fontSizeMap: getElementByIndex($font-sizes, 1);
 }
-@debug $fontSizeMap;
 
 @each $size-name, $size-value in $fontSizeMap {
    .fs-#{$size-name} {
