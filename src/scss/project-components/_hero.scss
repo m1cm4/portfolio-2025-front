@@ -77,5 +77,10 @@
       line-height: 1.8rem;
       max-width: 44ch;
       margin-inline: auto;
+      text-align: center;
+
+      @include mq(medium){
+         text-align: left;
+      }
    }
 }
