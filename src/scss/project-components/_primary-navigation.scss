@@ -12,20 +12,44 @@
    // height:0;
 
 
-
-   
    a{
-      display: inline-block;
+      display: flex;
+      align-items: center;
+      align-self: center;
+      gap: .4em;
+      height: 1.8em;
+      padding: .26em .8em;
+
       color: $color-neutral-100;
       font-family: $font-family-accent;
       font-weight: $font-weight-extra-bold;
-      letter-spacing: .05em;
+      letter-spacing: .0em;
       background: $color-neutral-500;
-      padding: .26em .8em;
       border-radius: 100vw;
+
       &:hover, &:focus-visible{
          color: $color-neutral-100;
          background-color: $color-primary-200;
+      }
+
+      span.e-dans-a{
+         display: inline-block;
+      transform: scaleX(130%);
+      padding-inline: .13em;
+   }
+
+      .picto {
+         align-self: center;
+         aspect-ratio: 1;
+         width: 24px;
+         height: 24px;
+         aspect-ratio: 1;
+         fill: $color-neutral-100;
+      }
+      .picto-linkedin{
+
+         width: 20px;
+         height: 20px;
       }
    }
    

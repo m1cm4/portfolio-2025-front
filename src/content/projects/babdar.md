@@ -13,7 +13,7 @@ linklist:
   - "[website](https://babdar.be/)"
 
 ---
-Site vitrine pour le restaurant Babdar (Bruxelles).
+Site vitrine pour le restaurant Babdar (Bruxelles, 2015).
   - Intégration HTML5 basée sur HTML5 Boilerplate
   - Animations et interactivité via jQuery
   - Gestion de contenu via CMS Yii Framework

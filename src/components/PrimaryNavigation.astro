@@ -5,8 +5,25 @@ const { id, aria} = Astro.props;
 
 <nav {id} aria-labe={aria}>
    <ul class="nav primary-nav">
-   <li><a href="/files/michel-maes_cv_2025.6.11.pdf">curiculum vitae (pdf)</a></li>
-   <li><a href="https://www.linkedin.com/in/mic-maes">linkedin</a></li>
-   <li><a href="https://github.com/m1cm4/">github</a></li>
-   </ul>
-</nav>
+      <li><a href="/files/michel-maes_cv_2025.6.11.pdf">
+         <span>
+            curriculum vit<span class="e-dans-a">æ</span> (pdf)
+         </span>
+      </a></li>
+      <li><a href="https://www.linkedin.com/in/mic-maes" aria-label="voir mon compte linkedin">
+         <svg class="picto picto-linkedin" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg" aria-labelledby="titrelikedin">
+            <title id="titrelinkedin" lang="fr">logo du site linkedin.com</title>
+            <path d="M20 0C20 0 2 0 2 0C0.895 0 0 0.895 0 2C0 2 0 20 0 20C0 21.105 0.895 22 2 22C2 22 20 22 20 22C21.105 22 22 21.105 22 20C22 20 22 2 22 2C22 0.895 21.105 0 20 0C20 0 20 0 20 0ZM6.954 18L4.004 18L4.004 8.508L6.954 8.508L6.954 18L6.954 18ZM5.449 7.151C4.498 7.151 3.729 6.38 3.729 5.431C3.729 4.482 4.499 3.712 5.449 3.712C6.397 3.712 7.168 4.483 7.168 5.431C7.168 6.38 6.397 7.151 5.449 7.151C5.449 7.151 5.449 7.151 5.449 7.151ZM18.004 18L15.056 18C15.056 18 15.056 13.384 15.056 13.384C15.056 12.283 15.036 10.867 13.523 10.867C11.988 10.867 11.752 12.066 11.752 13.304C11.752 13.304 11.752 18 11.752 18L8.804 18L8.804 8.508L11.634 8.508L11.634 9.805C11.634 9.805 11.674 9.805 11.674 9.805C12.068 9.059 13.03 8.272 14.465 8.272C17.452 8.272 18.004 10.238 18.004 12.794C18.004 12.794 18.004 18 18.004 18L18.004 18Z"  />
+         </svg></a></li>
+         <li>
+            <a aria-label="voir mon compte github" href="https://github.com/m1cm4/">
+               <svg class="picto picto-github" viewBox="0 0 24 23.63" xmlns="http://www.w3.org/2000/svg" aria-labelledby="titregithub">
+                  <title id="titregithub" lang="fr">logo du service github.com</title>
+                  <path d="M12 0C5.373 0 0 5.373 0 12C0 17.623 3.872 22.328 9.092 23.63C9.036 23.468 9 23.28 9 23.047C9 23.047 9 20.996 9 20.996C8.513 20.996 7.697 20.996 7.492 20.996C6.671 20.996 5.941 20.643 5.587 19.987C5.194 19.258 5.126 18.143 4.152 17.461C3.863 17.234 4.083 16.975 4.416 17.01C5.031 17.184 5.541 17.606 6.021 18.232C6.499 18.859 6.724 19.001 7.617 19.001C8.05 19.001 8.698 18.976 9.308 18.88C9.636 18.047 10.203 17.28 10.896 16.918C6.9 16.507 4.993 14.519 4.993 11.82C4.993 10.658 5.488 9.534 6.329 8.587C6.053 7.647 5.706 5.73 6.435 5C8.233 5 9.32 6.166 9.581 6.481C10.477 6.174 11.461 6 12.495 6C13.531 6 14.519 6.174 15.417 6.483C15.675 6.17 16.763 5 18.565 5C19.297 5.731 18.946 7.656 18.667 8.594C19.503 9.539 19.995 10.66 19.995 11.82C19.995 14.517 18.091 16.504 14.101 16.917C15.199 17.49 16 19.1 16 20.313C16 20.313 16 23.047 16 23.047C16 23.151 15.977 23.226 15.965 23.315C20.641 21.676 24 17.236 24 12C24 5.373 18.627 0 12 0C12 0 12 0 12 0Z" transform="translate(0 0)" />
+               </svg>
+            </a></li>
+         </ul>
+          <div class="background-image">
+            <img src="images/backgrounds/illustration.svg" aria-role="hide" alt="une panoplie de logotypes d'outils et de languages de programmation">
+         </div>
+      </nav>

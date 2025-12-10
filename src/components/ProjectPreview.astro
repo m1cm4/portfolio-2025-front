@@ -31,7 +31,9 @@ const { Content } = await render(project);
 
 <article class=`project-preview flow ${project.data.featured ? "featured" : ""}`>
    <div class="image-container">
-      <img src={project.data.imageSrc} alt={project.data.imageAlt} />
+      <picture>
+         <img src=`${project.data.imageSrc}` alt={project.data.imageAlt} />
+      </picture>
    </div>
 
    <h2 class="title-3">{project.data.title}</h2>

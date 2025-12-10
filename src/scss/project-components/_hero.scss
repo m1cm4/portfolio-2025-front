@@ -1,21 +1,76 @@
 @use "../mm-design-system/abstracts/" as *;
 
 .hero{
+   --grid-gap: .6 rem;
    background: linear-gradient(135deg, #F0FAEE 60%, transparent);
    padding-block-end: $size-7;
+   
+   // modification du compsant par défaut
+   .event-columns{
+      align-items: stretch;
+   }
+   
+   .hero-image{
+      //border:1px solid red;
 
+      position: relative;
+      
+   }
+   
+   padding-block-start: 0;
+   
+   .hero-image{
+      margin-bottom: 1rem;
+      height: 17rem;
+      overflow: hidden;
+      
+      img{
+         position: absolute;
+         top: -100%;
+         left: -3vw;
+         width: 800px;
+         max-width: inherit;
+      }
+   }
+   
+   @include mq(medium){
+      padding-block-start: $section-padding-block;
+      .hero-image{
+      margin-bottom: 0;
+      height: 100%;
+      overflow: visible;
+      padding-top: 5rem;
+      
+      img{
+         position: relative;
+         top: 0;
+         left: 0;
+         width: 100%;
+         max-width: 100%;
+      }
+   }
+      
+   }
+   
+   
+   
    h1{
       text-align: center;
       letter-spacing: $letter-spacing-regular;
    }
    // border: 1px solid red;
-
+   
    h2{
       font-size: $font-size-700;
       background: linear-gradient(45deg,$color-accent-300 20%, $color-secondary-300 70%);
       background-clip: text;
       color: transparent;
       text-align: center;
+   }
+   
+   h2:not(:first-of-type){
+      background: linear-gradient(-45deg,$color-accent-300 20%, $color-secondary-300 70%);
+      background-clip: text;
    }
    &--description p{
       line-height: 1.8rem;

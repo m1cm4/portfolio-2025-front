@@ -1,6 +1,7 @@
 @use "../abstracts/" as *;
 
 .site-header{
+  position: relative;
   --site-header-padding: #{$site-header-padding};
   color: $site-header-color;
   background: $site-header-background-color;
@@ -17,4 +18,5 @@
     }
     
   }
+
 }
