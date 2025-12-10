@@ -37,13 +37,13 @@
   @keyframes stickyn{
    from{
       transform: translateY(-6rem);
-      --background-opacity: 1;  
+      --background-opacity: .7;  
    }
    to{
       top: 0rem;
       background: rgba(233, 248, 231, 0.959);
       transform: translateY(0);
-      --background-opacity: 1;
+      --background-opacity: .7;
    }
   }
 
