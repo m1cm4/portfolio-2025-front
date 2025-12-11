@@ -19,6 +19,6 @@ linklist:
 ---
 Site vitrine responsive pour le cabinet d'architecture Albino Cipriani (Paris).
   - Conception graphique et maquettage responsive
-  - Intégration HTML5 / CSS sur mesure
+  - Intégration HTML5&nbsp;/ CSS sur mesure
   - Développement de galeries photos interactives (jQuery)
   - Back-office personnalisé sous Yii Framework (PHP)

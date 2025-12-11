@@ -15,9 +15,9 @@ linklist:
   - "[website](http://www.troisbarres.com)"
 
 ---
-Développement complet (Frontend & Backend) pour le studio graphique Troisbarrespoint.
-  - Intégration d'un layout complexe en grille (pré-CSS Grid)
+Développement complet (Frontend&nbsp;& Backend) pour le studio graphique Troisbarrespoint.
+  - Intégration d'un layout complexe en grille (pré&nbsp;CSS&nbsp;Grid)
   - Développement de slideshows interactifs en jQuery
   - Backend sous Drupal pour une gestion autonome du contenu
   
-*Design graphique : Isabelle Debry, Troisbarrespoint*
+*Design graphique&nbsp;: Isabelle Debry, Troisbarrespoint*

@@ -14,4 +14,4 @@ linklist:
 ---
 Identité visuelle pour 'Le Delecta', bar à vin bruxellois.
   - Création du logotype
-  - Déclinaison sur supports imprimés : cartes de visite et cartes postales promotionnelles
+  - Déclinaison sur supports imprimés&nbsp;: cartes de visite et cartes postales promotionnelles

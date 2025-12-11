@@ -18,4 +18,4 @@ Site vitrine pour le restaurant Babdar (Bruxelles, 2015).
   - Animations et interactivité via jQuery
   - Gestion de contenu via CMS Yii Framework
   
-*Design graphique : Troisbarrespoint*
+*Design graphique&nbsp;: Troisbarrespoint*
